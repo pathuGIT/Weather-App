@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.apitest.weatherController">
+   <children>
+      <Pane fx:id="backPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="50.0" layoutY="75.0" prefHeight="261.0" prefWidth="409.0" style="-fx-border-color: grey; -fx-border-radius: 20;">
+               <children>
+                  <Label fx:id="temp" alignment="CENTER" layoutX="98.0" layoutY="61.0" prefHeight="100.0" prefWidth="234.0" text="87°" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="88.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="backButton" layoutX="722.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 15;" text="Back">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="description" alignment="CENTER" layoutX="167.0" layoutY="233.0" prefHeight="18.0" prefWidth="160.0" text="Mostly Clear">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="76.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-location-64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="name" layoutX="108.0" layoutY="87.0" text="Colombo">
+               <font>
+                  <Font name="Calibri Light" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" layoutX="320.0" layoutY="87.0" text="2024 - 04 -11">
+               <font>
+                  <Font name="Calibri Light" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="261.0" layoutY="87.0" text="Today: ">
+               <font>
+                  <Font name="Calibri Light" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="20.0" layoutX="88.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-atmospheric-pressure-50.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="pressure" layoutX="108.0" layoutY="295.0" prefHeight="23.0" prefWidth="57.0" text="1008.0">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="20.0" layoutX="219.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-windsock-64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="direct" layoutX="239.0" layoutY="295.0" prefHeight="23.0" prefWidth="73.0" text="87.0">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="20.0" layoutX="350.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-wind-50.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="wind" layoutX="370.0" layoutY="295.0" prefHeight="23.0" prefWidth="68.0" text="1008.0">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="52.0" layoutY="434.0" prefHeight="44.0" prefWidth="182.0" style="-fx-border-radius: 20;">
+               <children>
+                  <Label layoutX="31.0" layoutY="13.0" text="Longitude:">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lon" layoutX="106.0" layoutY="13.0" text="80.217">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="258.0" layoutY="434.0" prefHeight="44.0" prefWidth="182.0" style="-fx-border-radius: 20;">
+               <children>
+                  <Label layoutX="36.0" layoutY="13.0" text="Latitude:">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lat" layoutX="101.0" layoutY="13.0" text="80.217">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="467.0" layoutY="434.0" prefHeight="44.0" prefWidth="182.0" style="-fx-border-radius: 20;">
+               <children>
+                  <Label layoutX="34.0" layoutY="13.0" text="Humidity:">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="hum" layoutX="103.0" layoutY="13.0" text="80.217">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="305.0" fitWidth="260.0" layoutX="500.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/12780671_5038551.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="131.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-map-editing-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="337.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-map-editing-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="546.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-humidity-66.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="frontPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="76.0" layoutY="291.0" mnemonicParsing="false" onAction="#Search" prefHeight="27.0" prefWidth="191.0" style="-fx-background-radius: 10; -fx-background-color: #92e3a9;" text="Search" textFill="#273238">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="loc" layoutX="76.0" layoutY="247.0" prefHeight="25.0" prefWidth="191.0" style="-fx-background-radius: 10;" />
+            <Button fx:id="exitButton" layoutX="770.0" layoutY="5.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="16.0" style="-fx-background-radius: 10;" text="X">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="402.0" fitWidth="413.0" layoutX="378.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/13416104_5242962.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="76.0" layoutY="201.0" text="Location">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="err" alignment="CENTER" layoutX="76.0" layoutY="166.0" prefHeight="17.0" prefWidth="191.0" textFill="#ff1616">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="93.0" text="Find Weather">
+               <font>
+                  <Font name="Yu Gothic Light" size="43.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
